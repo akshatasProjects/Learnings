@@ -8,6 +8,6 @@ textInput.addEventListener("input", () => {
 
   // counting words
   let getWords = textInput.value.trim();
-  let word = getWords.split(" ");
+  let word = getWords.split(/\s+/).filter((word) => word.length > 0);
   countWords.textContent = `Words are:` + word.length;
 });
