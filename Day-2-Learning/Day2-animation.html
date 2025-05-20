@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      /* 
+        transform- The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.
+        
+        transform: none|transform-functions|initial|inherit;
+
+
+        TRANSITION PROPERTY
+        transition, transition-dealy, transition-duration, 
+        transition-timing-funtion: ease, ease-in, ease-in-out, linear
+
+        ----------------ANIMATION
+
+        * write keyword 'animation' where you want animation to happen
+        
+        * animation: name duration timing-function delay fill-mode  animation-iteration-count;
+
+        animation-fill-mode : forwards, - after animation is done keep all properties inside at 100%
+                              backwards, - applies property at 0% before starting animation
+                              both
+
+        animation-play-state : paused/ running/unset
+
+
+        @keyframes animation-name {
+          100%{
+            transform:translateX(100%)
+          }
+        
+        }
+
+
+        animation property
+        animation
+        animation-delay
+        animation-direction
+        animation-duration
+        animation-fill-mode
+        animation-iteration-count
+        animation-name
+        animation-play-state
+        animation-timing-function
+         
+      
+
+        */
+
+      .parent {
+        background-color: burlywood;
+        height: 400px;
+        width: 400px;
+      }
+
+      .child {
+        background-color: cadetblue;
+        height: 50%;
+        width: 50%;
+        /* transition: transform 1s ease-in; */
+      }
+
+      .parent:hover .child {
+        /* transform: translateX(100%); */
+        animation: left-to-right 1s ease-in forwards 3 alternate 3s;
+      }
+
+      @keyframes left-to-right {
+        0% {
+          transform: translateX(0);
+        }
+
+        33% {
+          transform: translateY(100%);
+        }
+
+        66% {
+          transform: translateX(100%) translateY(100%);
+        }
+
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

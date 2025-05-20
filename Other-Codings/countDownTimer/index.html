@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Down Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+    <p>What is does</p>
+    <ul>
+      <li>Grabs the user's selected date/time.</li>
+      <li>Starts a countdown using setInterval.</li>
+      <li>Calculates the remaining time.</li>
+      <li>Converts it to readable format (d, h, m, s).</li>
+      <li>Updates every second.</li>
+      <li>Stops at 0.</li>
+    </ul>
+
+    <form>
+      <input type="datetime-local" id="date-time" />
+      <button id="countBtn">Start Countdown</button>
+      <div id="result"></div>
+    </form>
+
+    <script src="1.CountdownTimer.js"></script>
+  </body>
+</html>
